@@ -1,4 +1,4 @@
-import groovy.json.JsonSlurper
+    import groovy.json.JsonSlurper
 
 properties([
     durabilityHint('PERFORMANCE_OPTIMIZED'),
@@ -6,10 +6,10 @@ properties([
     [$class: 'BuildDiscarderProperty', strategy: [$class: 'LogRotator',  daysToKeepStr: '90', numToKeepStr: '50']],
     parameters([
         string(
-            defaultValue: 'https://github.com/kumvijaya/pr-merge-demo/pull/1',
+            defaultValue: 'https://github.com/vijaikannangit/pr-merge-demo/pull/1',
             name: 'prUrl',
             trim: true,
-            description: 'Provide GitHub pull request URL: (Example: https://github.com/kumvijaya/pr-merge-demo/pull/1).'
+            description: 'Provide GitHub pull request URL: (Example: https://github.com/vijaikannangit/pr-merge-demo/pull/1).'
         )
     ])
 ])
