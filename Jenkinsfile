@@ -50,6 +50,7 @@ def processMerge(prUrl) {
         dir('merge') {
             checkout scm
             withCredentials([usernamePassword(credentialsId: 'GITHUB_USER_PASS', usernameVariable: 'GITHUB_USER', passwordVariable: 'GITHUB_PASSWORD')]) {
+                powershell 'dir'
                 sh """
                     python -m pip install -r requirements.txt --user
                     python git-merger.py -p ${prUrl}
