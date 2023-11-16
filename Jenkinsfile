@@ -52,7 +52,7 @@ def processMerge(prUrl) {
             withCredentials([usernamePassword(credentialsId: 'GITHUB_USER_PASS', usernameVariable: 'GITHUB_USER', passwordVariable: 'GITHUB_PASSWORD')]) {
                 powershell 'dir'
                 echo "Here1"
-                sh """
+                bat  """
                 echo "Here2"
                 powershell 'dir -p'
                 echo "Here3"
