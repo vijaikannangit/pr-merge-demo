@@ -6,7 +6,7 @@ properties([
     [$class: 'BuildDiscarderProperty', strategy: [$class: 'LogRotator',  daysToKeepStr: '90', numToKeepStr: '50']],
     parameters([
         string(
-            defaultValue: 'https://github.com/vijaikannangit/pr-merge-demo/pull/1',
+            defaultValue: 'https://github.com/vijaikannangit/pr-merge-demo/pull/2',
             name: 'prUrl',
             trim: true,
             description: 'Provide GitHub pull request URL: (Example: https://github.com/vijaikannangit/pr-merge-demo/pull/1).'
