@@ -52,7 +52,7 @@ def processMerge(prUrl) {
             withCredentials([usernamePassword(credentialsId: 'GITHUB_USER_PASS', usernameVariable: 'GITHUB_USER', passwordVariable: 'GITHUB_PASSWORD')]) {
                 // sh 'C:\\cygwin64\\bin\\sh.exe your_command_here'
                 sh  """
-                    C:\\cygwin64\\bin\sh.exe python -m pip install -r requirements.txt --user
+                    C:\\cygwin64\\bin\\sh.exe python -m pip install -r requirements.txt --user
                     C:\\cygwin64\\bin\\sh.exe python git-merger.py -p ${prUrl}
                     // python -m pip install -r requirements.txt --user
                     // python git-merger.py -p ${prUrl}
